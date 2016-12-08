@@ -35,7 +35,7 @@ app.post('/*', function(req, res) {
   // Rosters are in the body under rosterInfoList
   const newDataRef = dataRef.push();
   newDataRef.set({
-    data: body || ''
+    data: body
   });
 
   return res.send('Got a POST request');
