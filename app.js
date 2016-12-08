@@ -14,7 +14,7 @@ admin.initializeApp({
   databaseURL: "https://madden-cfm-exporter.firebaseio.com"
 });
 
-// Setup
+// Setup 
 // Change the default port here if you want for local dev.
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/dist'));
