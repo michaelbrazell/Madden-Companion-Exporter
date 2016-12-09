@@ -14,7 +14,7 @@ admin.initializeApp({
   databaseURL: "https://madden-cfm-exporter.firebaseio.com"
 });
 
-// Setup 
+// Setup
 // Change the default port here if you want for local dev.
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/dist'));
@@ -35,9 +35,9 @@ app.post('/*', function(req, res) {
   // Rosters are in the body under rosterInfoList
   const newDataRef = dataRef.push();
   newDataRef.set({
-    data: body || ''
+    data: (req && req.body) || ''
   });
-
+  
   return res.send('Got a POST request');
 });
 
